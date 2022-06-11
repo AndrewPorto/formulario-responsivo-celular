@@ -19,16 +19,18 @@ body {
 main {
     display: flex;
     position: absolute;
-    top: 50%;  
     transform: translate(0, -50%);
+    top: 50%;  
+    width: 100vw;
     align-items: center;
+    justify-content: center;
 }
 
 .conteudo {
     color: #FFF;
     width: 600px;
     position: relative;
-    margin-left: 20%;
+    
     
 }
 
@@ -44,18 +46,24 @@ form {
 .container {
     display: flex;
     flex-direction: column;
-    width: 550px;
+    width: 460px;
     margin-left: 80px;
+    align-items: center;
 }
 
 .btn-sup {
     margin-bottom: 25px;
     height: 55px;
-    background-color: hsl(248, 32%, 49%) ;
+    background-color: hsl(248, 32%, 49%);
     color: #FFF;
     border-radius: 10px;
     border: none;
     box-shadow: 0 5px  rgba(0, 0, 0, 0.288);
+    width: 450px;
+}
+.btn-sup:hover {
+    background-color: hsl(248, 41%, 37%);
+    letter-spacing: .5px;
 }
 
 form input {
@@ -65,6 +73,7 @@ form input {
     width: 400px;
     height: 50px;
     border-radius: 5px;
+    text-indent: 20px;
     
 }
 
@@ -82,6 +91,12 @@ form input {
     box-shadow: 0 2px  rgba(0, 0, 0, 0.288);
 }
 
+.btn-inf:hover {
+    background-color: hsl(154, 72%, 38%);
+    letter-spacing: 0.5px;
+
+}
+
 form p {
     font-size: 10px;
     text-align: center;
@@ -94,4 +109,29 @@ form span {
 
 button {
     cursor: pointer;
+}
+
+@media (max-width: 900px){
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conteudo {
+        width: 400px;
+        margin-bottom: 50px;
+        margin-left: 70px;
+        
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+    }
 }
